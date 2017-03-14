@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node ./node_modules/webpack/bin/webpack.js --config webpack.prod.config.js"
   },
