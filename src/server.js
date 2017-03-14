@@ -5,4 +5,4 @@ import express from 'express';
 
 const app = express();
 
-app.listen(4000, () => console.log('Now browse to localhost:4000/graphql'));
+app.listen(process.env.PORT || 5000, () => console.log('Now browse to localhost:4000/graphql'));
