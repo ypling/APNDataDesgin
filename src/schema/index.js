@@ -6,8 +6,20 @@ import {buildSchema} from 'graphql';
 
 export const schema = buildSchema(`
   type Query {
-    hello: String
+    candidate: Candidate
+    job: Job
+  }
+  
+  type Candidate{
+    id: ID!
+    name: String
+    memberId : ID
+  }
+  
+  type Job{
+    id: ID!
+    name: String
   }
 `);
 
-export const root = {hello: () => 'Hello world!'};
+export const root = {};

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./node_modules/webpack/bin/webpack.js --config webpack.prod.config.js"
+    "postinstall": "node ./node_modules/webpack/bin/webpack.js --config webpack.prod.config.js",
+    "dev": "babel-watch ./src/server.js"
   },
   "author": "ypling",
   "license": "ISC",
@@ -16,5 +17,9 @@
     "express-graphql": "^0.6.3",
     "graphql": "^0.9.1",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-watch": "^2.0.6"
   }
 }
