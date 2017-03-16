@@ -10,15 +10,45 @@ export const schema = buildSchema(`
     job: Job
   }
   
-  type Candidate{
+  interface Candidate{
     id: ID!
     name: String
     memberId : ID
+    emails: [String]
+    skills: [String]
+    experiences: [Experience]
+  }
+ 
+  type LinkedInCandidate implements Candidate {
+    id: ID!
+    name: String
+    memberId : ID
+    emails: [String]
+    skills: [String]
+    experiences: [Experience]
+    linkedInUrl: String
+  }
+
+  type DiceCandidate implements Candidate {
+    id: ID!
+    name: String
+    memberId : ID
+    emails: [String]
+    skills: [String]
+    experiences: [Experience]
+    diceUrl: String
   }
   
   type Job{
     id: ID!
     name: String
+  }
+  
+  type Experience{
+    company: String
+    date: String
+    locality: String
+    title: String
   }
 `);
 
